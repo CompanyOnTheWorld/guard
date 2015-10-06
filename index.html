@@ -1,25 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="favicon.png" type="image/png" />
-    <script src="documentup.min.js"></script>
-    <script>
-      DocumentUp.document({
-        repo: 'guard/guard',
-        theme: 'v1',
-        name: 'Guard',
-        travis: true,
-        issues: true,
-        twitter: ["rymai", "thibaudgg"]
-      });
-    </script>
-  </head>
-  <body>
-    <noscript>
-      <h1>Guard</h1>
-      <p>Guard is a command line tool to easily handle events on file system modifications.</p>
-      <p><a href="https://github.com/guard/guard">https://github.com/guard/guard</a></p>
-    </noscript>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
+  <link rel="stylesheet" href="stylesheets/github-dark.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>CompanyOnTheWorld/Guard</title>
+  <meta name="description" content="Guard is a command line tool to easily handle events on file system modifications.">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">CompanyOnTheWorld/Guard</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">Guard is a command line tool to easily handle events on file system modifications.</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/CompanyOnTheWorld/guard/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/CompanyOnTheWorld/guard/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/CompanyOnTheWorld/guard" class="code">View CompanyOnTheWorld/Guard on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <p><img class="emoji" title=":exclamation:" alt=":exclamation:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2757.png" height="20" width="20" align="absmiddle"> Guard is currently accepting more maintainers. Please <a href="https://github.com/guard/guard/wiki/Maintainers">read this</a> if you're interested in joining the team.</p>
+
+<h1>
+<a id="guard" class="anchor" href="#guard" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guard</h1>
+
+<p><a href="https://rubygems.org/gems/guard"><img src="https://img.shields.io/gem/v/guard.svg?style=flat" alt="Gem Version"></a> <a href="https://travis-ci.org/guard/guard"><img src="https://travis-ci.org/guard/guard.svg" alt="Build Status"></a> <a href="https://gemnasium.com/guard/guard"><img src="https://gemnasium.com/guard/guard.png" alt="Dependency Status"></a> <a href="https://codeclimate.com/github/guard/guard"><img src="https://codeclimate.com/github/guard/guard/badges/gpa.svg" alt="Code Climate"></a> <a href="https://codeclimate.com/github/guard/guard"><img src="https://codeclimate.com/github/guard/guard/badges/coverage.svg" alt="Test Coverage"></a> <a href="http://inch-ci.org/github/guard/guard"><img src="http://inch-ci.org/github/guard/guard.svg" alt="Inline docs"></a></p>
+
+<p><img src="http://cl.ly/image/1k3o1r2Z3a0J/guard-Icon.png" alt="Guard Icon" align="right">
+Guard automates various tasks by running custom rules whenever file or directories are modified.</p>
+
+<p>It's frequently used by software developers, web designers, writers and other specialists to avoid mundane, repetitive actions and commands such as "relaunching" tools after changing source files or configurations.</p>
+
+<p>Common use cases include: an IDE replacement, web development tools, designing "smart" and "responsive" build systems/workflows, automating various project tasks and installing/monitoring various system services.</p>
+
+<p>For a full categorized list of known Guard plugins, look here: <a href="https://github.com/guard/guard/wiki/Guard-Plugins">https://github.com/guard/guard/wiki/Guard-Plugins</a></p>
+
+<p>If you have
+any questions about Guard or want to share some information with the Guard community, please go to one of
+the following places:</p>
+
+<ul>
+<li><a href="https://github.com/guard/guard/wiki">Guard Wiki</a></li>
+<li>
+<a href="https://plus.google.com/u/1/communities/110022199336250745477">Google+ community</a>.</li>
+<li>
+<a href="http://groups.google.com/group/guard-dev">Google group</a>.</li>
+<li>
+<a href="http://stackoverflow.com/questions/tagged/guard">StackOverflow</a>.</li>
+<li>IRC channel <code>#guard</code> (irc.freenode.net) for chatting.</li>
+</ul>
+
+<p>Before you file an issue, make sure you have read the <em><a href="#issues">known issues</a></em> and <em><a href="#file-an-issue">file an issue</a></em> sections that contains some important information.</p>
+
+<h4>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h4>
+
+<ul>
+<li>File system changes handled by our awesome <a href="https://github.com/guard/listen">Listen</a> gem.</li>
+<li>Support for visual system notifications.</li>
+<li>Huge eco-system with <a href="https://rubygems.org/search?query=guard-">more than 220</a> Guard plugins.</li>
+<li>Tested against Ruby 1.9.3, 2.0.0, 2.1.0, JRuby &amp; Rubinius.</li>
+</ul>
+
+<h4>
+<a id="screencast" class="anchor" href="#screencast" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screencast</h4>
+
+<p>Two nice screencasts are available to help you get started:</p>
+
+<ul>
+<li>
+<a href="http://railscasts.com/episodes/264-guard">Guard</a> on RailsCast.</li>
+<li>
+<a href="http://net.tutsplus.com/tutorials/tools-and-tips/guard-is-your-best-friend">Guard is Your Best Friend</a> on Net Tuts+.</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>The simplest way to install Guard is to use <a href="http://gembundler.com/">Bundler</a>.</p>
+
+<p>Add Guard (and any other dependencies) to a <code>Gemfile</code> in your project’s root:</p>
+
+<div class="highlight highlight-source-ruby"><pre>group <span class="pl-c1">:development</span> <span class="pl-k">do</span>
+  <span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>guard<span class="pl-pds">'</span></span>
+<span class="pl-k">end</span></pre></div>
+
+<p>then install it by running Bundler:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ bundle</pre></div>
+
+<p>Generate an empty <code>Guardfile</code> with:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ bundle <span class="pl-c1">exec</span> guard init</pre></div>
+
+<p>Run Guard through Bundler with:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ bundle <span class="pl-c1">exec</span> guard</pre></div>
+
+<p>If you are on Mac OS X and have problems with either Guard not reacting to file
+changes or Pry behaving strange, then you should <a href="https://github.com/guard/guard/wiki/Add-Readline-support-to-Ruby-on-Mac-OS-X">add proper Readline support
+to Ruby on Mac OS
+X</a>.</p>
+
+<h4>
+<a id="avoiding-gemdependency-problems" class="anchor" href="#avoiding-gemdependency-problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Avoiding gem/dependency problems</h4>
+
+<p><strong>It's important that you always run Guard through Bundler to avoid errors.</strong></p>
+
+<p>If you're getting sick of typing <code>bundle exec</code> all the time, try one of the following:</p>
+
+<ul>
+<li><p>(Recommended) Running <code>bundle binstub guard</code> will create <code>bin/guard</code> in your
+project, which means running <code>bin/guard</code> (tab completion will save you a key
+stroke or two) will have the exact same result as <code>bundle exec guard</code>.</p></li>
+<li><p>Or, for RubyGems &gt;= 2.2.0 (at least, though the more recent the better),
+simply set the <code>RUBYGEMS_GEMDEPS</code> environment variable to <code>-</code> (for autodetecting
+the Gemfile in the current or parent directories) or set it to the path of your Gemfile.</p></li>
+</ul>
+
+<p>(To upgrade RubyGems from RVM, use the <code>rvm rubygems</code> command).</p>
+
+<p><em>NOTE: this Rubygems feature is still under development still lacks many features of bundler</em></p>
+
+<ul>
+<li>Or, for RubyGems &lt; 2.2.0 check out the <a href="https://github.com/mpapis/rubygems-bundler">Rubygems Bundler</a>.</li>
+</ul>
+
+<h4>
+<a id="add-guard-plugins" class="anchor" href="#add-guard-plugins" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Guard plugins</h4>
+
+<p>Guard is now ready to use and you should add some Guard plugins for your specific use. Start exploring the many Guard
+plugins available by browsing the <a href="https://github.com/guard">Guard organization</a> on GitHub or by searching for <code>guard-</code>
+on <a href="https://rubygems.org/search?utf8=%E2%9C%93&amp;query=guard-">RubyGems</a>.</p>
+
+<p>When you have found a Guard plugin of your interest, add it to your <code>Gemfile</code>:</p>
+
+<div class="highlight highlight-source-ruby"><pre>group <span class="pl-c1">:development</span> <span class="pl-k">do</span>
+  <span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;guard-plugin-name&gt;<span class="pl-pds">'</span></span>
+<span class="pl-k">end</span></pre></div>
+
+<p>See the init section of the Guard usage below to see how to install the supplied plugin template that you can install and
+to suit your needs.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Guard is run from the command line. Please open your terminal and go to your project work directory.</p>
+
+<p>Look here for a full <a href="https://github.com/guard/guard/wiki/List-of-Guard-Commands">list of Guard commands</a></p>
+
+<h3>
+<a id="start" class="anchor" href="#start" aria-hidden="true"><span class="octicon octicon-link"></span></a>Start</h3>
+
+<p>Just launch Guard inside your Ruby or Rails project with:</p>
+
+<div class="highlight highlight-source-shell"><pre>$ bundle <span class="pl-c1">exec</span> guard</pre></div>
+
+<p>Guard will look for a <code>Guardfile</code> in your current directory. If it does not find one, it will look in your <code>$HOME</code>
+directory for a <code>.Guardfile</code>.</p>
+
+<p>Please look here to see all the <a href="https://github.com/guard/guard/wiki/Command-line-options-for-Guard">command line options for Guard</a></p>
+
+<h2>
+<a id="interactions" class="anchor" href="#interactions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interactions</h2>
+
+<p>Please read how to <a href="https://github.com/guard/guard/wiki/Interacting-with-Guard">interact with Guard</a> on the console and which <a href="https://github.com/guard/guard/wiki/Interacting-with-Guard#guard-signals">signals</a> Guard accepts</p>
+
+<h2>
+<a id="guardfile-dsl" class="anchor" href="#guardfile-dsl" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guardfile DSL</h2>
+
+<p>For details on extending your <code>Guardfile</code> look at <a href="https://github.com/guard/guard/wiki/Guardfile-examples">Guardfile examples</a> or look at a list of commands <a href="https://github.com/guard/guard/wiki/Guardfile-DSL---Configuring-Guard">Guardfile-DSL / Configuring-Guard</a></p>
+
+<h2>
+<a id="issues" class="anchor" href="#issues" aria-hidden="true"><span class="octicon octicon-link"></span></a>Issues</h2>
+
+<p>Before reporting a problem, please read how to <a href="https://github.com/guard/guard/blob/master/CONTRIBUTING.md#file-an-issue">File an issue</a>.</p>
+
+<h2>
+<a id="development--contributing" class="anchor" href="#development--contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Development / Contributing</h2>
+
+<p>See the <a href="https://github.com/guard/guard/blob/master/CONTRIBUTING.md#development">Contributing Guide</a>.</p>
+
+<h4>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h4>
+
+<p><a href="https://github.com/thibaudgg">Thibaud Guillaume-Gentil</a> (<a href="http://twitter.com/thibaudgg">@thibaudgg</a>)</p>
+
+<h4>
+<a id="core-team" class="anchor" href="#core-team" aria-hidden="true"><span class="octicon octicon-link"></span></a>Core Team</h4>
+
+<ul>
+<li>R.I.P. <img class="emoji" title=":broken_heart:" alt=":broken_heart:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f494.png" height="20" width="20" align="absmiddle"> <a href="https://github.com/netzpirat">Michael Kessler</a> (<a href="http://twitter.com/netzpirat">@netzpirat</a>, <a href="http://www.flinkfinger.com">flinkfinger.com</a>).</li>
+<li>
+<a href="https://github.com/rymai">Rémy Coutable</a>.</li>
+<li>
+<a href="https://github.com/thibaudgg">Thibaud Guillaume-Gentil</a> (<a href="http://twitter.com/thibaudgg">@thibaudgg</a>, <a href="http://thibaud.gg/">thibaud.gg</a>).</li>
+</ul>
+
+<h4>
+<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h4>
+
+<p><a href="https://github.com/guard/guard/graphs/contributors">https://github.com/guard/guard/graphs/contributors</a>
+ [Please visit:<a href="http://companyontheworld.github.io/guard.">http://companyontheworld.github.io/guard.</a>]</p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/CompanyOnTheWorld" class="avatar"><img src="https://avatars0.githubusercontent.com/u/13640522?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/CompanyOnTheWorld">CompanyOnTheWorld</a> maintains <a href="https://github.com/CompanyOnTheWorld/guard">CompanyOnTheWorld/Guard</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/CompanyOnTheWorld/guard/tarball/master" class="tar">tar</a><a href="https://github.com/CompanyOnTheWorld/guard/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("supriyantomaftuh");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+</body>
 </html>
